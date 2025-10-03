@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Poll Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js library for pie charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>🗳️ Quick Poll</h1>
+            <p>Cast your vote and see live results!</p>
+        </header>
+
+        <!-- Survey/Voting Section -->
+        <div id="surveySection" class="section">
+            <div class="question-card">
+                <h2 id="questionText">What's your favorite programming language?</h2>
+                
+                <form id="voteForm">
+                    <div class="choice">
+                        <input type="radio" id="choice1" name="vote" value="JavaScript" required>
+                        <label for="choice1">JavaScript</label>
+                    </div>
+                    
+                    <div class="choice">
+                        <input type="radio" id="choice2" name="vote" value="Python">
+                        <label for="choice2">Python</label>
+                    </div>
+                    
+                    <div class="choice">
+                        <input type="radio" id="choice3" name="vote" value="Java">
+                        <label for="choice3">Java</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Submit Vote</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Results Section (hidden by default) -->
+        <div id="resultsSection" class="section hidden">
+            <h2>📊 Live Results</h2>
+            <div class="chart-container">
+                <canvas id="resultsChart"></canvas>
+            </div>
+            <div id="voteCount" class="vote-count"></div>
+            <button onclick="showSurvey()" class="btn-secondary">Back to Survey</button>
+        </div>
+
+        <!-- Toggle to View Results -->
+        <div class="toggle-container">
+            <button onclick="showResults()" class="btn-link">View Results →</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
