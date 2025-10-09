@@ -209,9 +209,9 @@ function displayChart(votes) {
     
     // Color palette
     const colors = [
-        '#FF6384',
-        '#36A2EB',
-        '#FFCE56',
+        '#89CFF0',
+        '#FFEC8B',
+        '#FFB6C1',
         '#4BC0C0',
         '#9966FF',
         '#FF9F40'
